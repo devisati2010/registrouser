@@ -6,4 +6,4 @@ var modelo = new mongoose.Schema({
     senha:String
 })
 
-module.exports = mongoose.models('usuarios' ,modelos)
+module.exports = mongoose.model('usuarios' ,modelo)
