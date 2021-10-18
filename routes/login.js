@@ -9,8 +9,8 @@ module.exports =(app)=>{
 
         var userexiste = await usuarios.findOne({email:req.body.email})
         if(userexiste){
-          var bcrypt = require('bcrypt')
-          var verificar = await bcrypt.compare(req.body.senha,userexiste.senha)
+          var bcryptjs = require('bcryptjs')
+          var verificar = await bcryptjs.compare(req.body.senha,userexiste.senha)
           if(verificar){
               res.send('usuario e senha correta')
           }else{

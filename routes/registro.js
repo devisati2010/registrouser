@@ -1,6 +1,6 @@
 module.exports =(app)=>{
 
-    var bcrypt = require('bcrypt')
+    var bcryptjs = require('bcryptjs')
 
     app.get('/registro', (req, res)=>{
         res.render('registro.ejs')
@@ -14,7 +14,7 @@ module.exports =(app)=>{
         if(userexiste){
             return res.render('registro.ejs',{mensagem:'Email já cadastrado'})
         }else{
-          var senhasegura = await bcrypt.hash(req.body.senha,12)
+          var senhasegura = await bcryptjs.hash(req.body.senha,12)
           var documento = new usuarios({
                 nome:req.body.nome,
                 email:req.body.email,
