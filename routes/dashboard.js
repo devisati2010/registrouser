@@ -1,5 +1,7 @@
 module.exports = (app)=>{
-    app.get('/dashboard',(req, res)=>{
+    var conexao = require("../config/database.js")()
+    var usuarios = require("../models/usuarios")
+    app.get('/dashboard', async(req, res)=>{
         var id = req.query.id
         console.log(id)
         if(!id){
