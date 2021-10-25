@@ -33,7 +33,7 @@ module.exports = (app)=>{
            user: dados.id
         
        }).save()
-       .than((result)=>{
+       .then((result)=>{
            res.redirect('/dashboard?id='+dados.id)
        })
     })
