@@ -1,8 +1,8 @@
 module.exports = (app)=>{
  
     var conexao = require("../config/database.js")()
-    var usuarios = require("../model/usuarios")
-    var atividades = require("../model/atividades")
+    var usuarios = require("../models/usuarios")
+    var atividades = require("../models/atividades")
  
     app.get('/dashboard',async(req,res)=>{
         var id = req.query.id
