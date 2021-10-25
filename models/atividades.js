@@ -4,7 +4,7 @@ var modelo = new mongoose.Schema({
     data:Date,
     tipo:String,
     entrega:String,
-    diciplina:String,
+    disciplina:String,
     instrucoes:String,
     user:String
 })
